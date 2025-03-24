@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Danh sách bài viết
+{% endblock %}
+
+{% block content %}
+    <section>
+       <h1>Danh sách bài viết</h1>
+       {% for post in posts %}
+            <article class="post">
+               <h2><a href="{% url 'page' slug=post.slug %}">{{ post.title }}</a></h2>
+               <p><i>Ngày đăng: {{ post.date }}</i></p>
+               <p>{{ post.body|truncatewords:50 }}</p>  <!-- Chỉ hiển thị 50 từ đầu tiên -->
+            </article>
+       {% empty %}
+           <p>Không có bài viết nào.</p>
+       {% endfor %}
+    </section>
+{% endblock %}

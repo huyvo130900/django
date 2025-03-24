@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+
+{% block content %}
+    <article>
+        <h1>{{ post.title }}</h1>
+        <p><i>Ngày đăng: {{ post.date }}</i></p>
+        <div>
+            {{ post.body|safe }}  <!-- Cho phép hiển thị HTML nếu có -->
+        </div>
+        <a href="{% url 'posts' %}">⬅ Quay lại danh sách bài viết</a>
+    </article>
+{% endblock %}

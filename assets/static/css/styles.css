@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    border-bottom: 2px solid #eee;
+}
+
+.navbar a:hover {
+    color: #007bff !important;
+}
+
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    color: white;
+}
+
+.nav .nav-link {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+
+.hero {
+    padding: 50px 20px;
+}
+
+.features {
+    background: #fff;
+    padding: 40px 20px;
+}
+
+.feature-item {
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+}
+
+.testimonials {
+    background: #e9ecef;
+    padding: 40px 20px;
+    border-radius: 5px;
+}
+
+.testimonial-item {
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.about {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 5px;
+}
+
+footer {
+    background: #007bff;
+    color: #fff;
+}
+.hero {
+    text-align: center;
+    width: 100%;
+}
+
+.hero-image {
+    position: relative; /* Để .hero-content căn theo ảnh */
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%; 
+    height: auto;
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6); /* Làm nền mờ để chữ nổi bật */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Giữ nội dung gọn gàng */
+}
+
+

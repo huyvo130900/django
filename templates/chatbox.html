@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat UI Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-1/4 bg-white p-4 shadow-md">
+            <h2 class="text-xl font-semibold">CHAT A.I+</h2>
+            <button class="w-full bg-blue-500 text-white p-2 rounded mt-4">+ New Chat</button>
+            <div class="mt-4 space-y-2">
+                <p class="text-gray-700">Create Html Game...</p>
+                <p class="text-gray-700">Apply Leave...</p>
+                <p class="text-gray-700">What is UI UX?</p>
+            </div>
+        </div>
+        
+        <!-- Chat Window -->
+        <div class="flex-1 flex flex-col">
+            <div class="p-4 bg-white shadow-md">Create a chatbot GPT...</div>
+            <div class="flex-1 p-4 overflow-auto" id="chat-box">
+                <div class="p-2 bg-gray-200 rounded w-max">Hello! How can I help?</div>
+            </div>
+            <div class="p-4 bg-white flex">
+                <input id="message" type="text" class="flex-1 border p-2 rounded" placeholder="Type a message...">
+                <button onclick="sendMessage()" class="ml-2 bg-blue-500 text-white p-2 rounded">Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function sendMessage() {
+            let input = document.getElementById('message');
+            let chatBox = document.getElementById('chat-box');
+            if (input.value.trim() !== "") {
+                let newMessage = document.createElement('div');
+                newMessage.classList.add('p-2', 'bg-blue-500', 'text-white', 'rounded', 'w-max', 'ml-auto', 'mb-2');
+                newMessage.textContent = input.value;
+                chatBox.appendChild(newMessage);
+                input.value = "";
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>
